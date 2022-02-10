@@ -1,0 +1,11 @@
+@echo off
+title //SF-DNS-CACHE-TERMINAL
+mode con cols=45 lines=30
+color 0f
+cls
+
+:start
+ipconfig /flushdns >nul
+echo [97m[[92m%time%[97m] Successfully Flushed DNS Cache
+ping localhost -n 2 >nul
+goto start
